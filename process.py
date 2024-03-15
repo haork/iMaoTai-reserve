@@ -249,7 +249,8 @@ def send_msg(title, content):
     url = 'http://www.pushplus.plus/send'
     r = requests.get(url, params={'token': config.PUSH_TOKEN,
                                   'title': title,
-                                  'content': content})
+                                  'content': content,
+				  'topic': 'maotai'})
     logging.info(f'通知推送结果：{r.status_code, r.text}')
 
 
